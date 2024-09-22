@@ -80,5 +80,6 @@ public class WolfManager : MonoBehaviour
         TurnChangeManager.WolfFlg = true;
         Debug.Log("˜T‚ª‹N‚«‚½");
         wolfFlg = false;
+        SeManager.Instance.PlaySE(1,1f);
     }
 }

@@ -42,6 +42,8 @@ public class TurnChangeManager : MonoBehaviour
 
     public static bool ResultFlg = false;
 
+    private bool finishWolfFlg = false;
+
     void Start()
     {
         //初期値
@@ -52,6 +54,7 @@ public class TurnChangeManager : MonoBehaviour
         WolfFlg = false;
         resultFlg = false;
         ResultFlg = false;
+        finishWolfFlg = false;
         turnCount = 0;
         turnCountText.text = ((uint)turnCount + 1) + " / 8";
 
@@ -74,10 +77,13 @@ public class TurnChangeManager : MonoBehaviour
             TurnAlternation();
             ItemFlg = false;
             CountFlg = true;
+            RouletteManager.ItemName = "None";
             //カウントがMAX以外なら表示
             if (turnCount != 8) turnCountText.text = ((uint)turnCount + 1) + " / 8";
             //ドラッグしている間に入ったらfalseにする
             DragItem.ItemDragFlg = false;
+            //SE
+            SeManager.Instance.PlaySE(5,0.7f);
 
             if (turnCount != 8) await turnStart.TurnChange();
         }
@@ -92,6 +98,7 @@ public class TurnChangeManager : MonoBehaviour
             TurnAlternation();
             TimeFlg = false;
             CountFlg = true;
+            RouletteManager.ItemName = "None";
             //カウントがMAX以外なら表示
             if (turnCount != 8) turnCountText.text = ((uint)turnCount + 1) + " / 8";
             //ドラッグしている間に入ったらfalseにする
@@ -110,12 +117,17 @@ public class TurnChangeManager : MonoBehaviour
             TurnAlternation();
             WolfFlg = false;
             CountFlg = true;
+            RouletteManager.ItemName = "None";
             //カウントがMAX以外なら表示
             if (turnCount != 8)turnCountText.text = ((uint)turnCount + 1) + " / 8";
             //ドラッグしている間に入ったらfalseにする
             DragItem.ItemDragFlg = false;
+            //少し待つ
+            if(turnCount != 8)await UniTask.Delay(TimeSpan.FromSeconds(3));
+            CountFlg = false;
 
             if (turnCount != 8) await turnStart.TurnChange();
+            if (turnCount == 8) finishWolfFlg = true;
         }
 
         //8回交代したら
@@ -136,6 +148,8 @@ public class TurnChangeManager : MonoBehaviour
     /// <returns></returns>
     private async UniTask ResultScene(string sceneName)
     {
+        //最後がオオカミで終わったら少し待つ
+        if (finishWolfFlg == true) await UniTask.Delay(TimeSpan.FromSeconds(3));
         await FadeManager.Inctance.FadeOut();
         await SceneManager.LoadSceneAsync(sceneName);
     }

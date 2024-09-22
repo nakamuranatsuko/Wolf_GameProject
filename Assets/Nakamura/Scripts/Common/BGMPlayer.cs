@@ -9,11 +9,11 @@ public class BGMPlayer : MonoBehaviour
     {
         get
         {
-            if (_instance == null)
+            if(_instance == null)
             {
                 _instance = GameObject.FindObjectOfType<BGMPlayer>();
 
-                if (_instance == null)
+                if(_instance == null)
                 {
                     GameObject obj = new GameObject("BGMPlayer");
                     _instance = obj.AddComponent<BGMPlayer>();
@@ -49,7 +49,7 @@ public class BGMPlayer : MonoBehaviour
         }
     }
 
-    public void PlayBGM(string name, float volume = 1.0f, bool loop = true)
+    public void PlayBGM(string name, float volume = 1.0f, bool loop = false)
     {
         if(BGMRack.AudioClips.TryGetValue(name,out AudioClip ac))
         {

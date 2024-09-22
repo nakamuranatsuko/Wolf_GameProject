@@ -48,7 +48,7 @@ public class RouletteManager : MonoBehaviour
 
     private int turnCount = 0;
 
-    private void OnEnable()
+    private async void OnEnable()
     {
         //ç≈èâÇÕÉAÉCÉeÉÄîÒï\é¶
         fishImage.gameObject.SetActive(false);
@@ -72,6 +72,12 @@ public class RouletteManager : MonoBehaviour
         rouletteAnimation[rouletteNum].gameObject.SetActive(true);
         rouletteAnimation[rouletteNum].loopPointReached += LoopPointReached;
         rouletteAnimation[rouletteNum].Play();
+
+        //SE
+        SeManager.Instance.PlaySE(14);
+        //è≠Çµé~Ç‹ÇÈ
+        await UniTask.Delay(TimeSpan.FromSeconds(2));
+        SeManager.Instance.PlaySE(13);
     }
 
     /// <summary>
@@ -80,6 +86,22 @@ public class RouletteManager : MonoBehaviour
     /// <param name="vp"></param>
     public async void LoopPointReached(VideoPlayer vp)
     {
+        //è≠Çµé~Ç‹ÇÈ
+        await UniTask.Delay(TimeSpan.FromSeconds(1));
+
+        rouletteAnimation[rouletteNum].gameObject.SetActive(false);
+        rouletteImage.gameObject.SetActive(false);
+
+        rouletteItemImage.gameObject.SetActive(true);
+        if (rouletteNum == 0) fishRouletteItem.gameObject.SetActive(true);
+        if (rouletteNum == 1) meatRouletteItem.gameObject.SetActive(true);
+        if (rouletteNum == 2) shieldRouletteItem.gameObject.SetActive(true);
+        if (rouletteNum == 3) swordRouletteItem.gameObject.SetActive(true);
+        //SE
+        SeManager.Instance.PlaySE(15);
+
+        //è≠Çµé~Ç‹ÇÈ
+        await UniTask.Delay(TimeSpan.FromSeconds(2));
 
         if (rouletteNum == 0)
         {
@@ -101,21 +123,6 @@ public class RouletteManager : MonoBehaviour
             ItemName = "Sword";
             swordImage.gameObject.SetActive(true);
         }
-
-        //è≠Çµé~Ç‹ÇÈ
-        await UniTask.Delay(TimeSpan.FromSeconds(1));
-
-        rouletteAnimation[rouletteNum].gameObject.SetActive(false);
-        rouletteItemImage.gameObject.SetActive(false);
-
-        rouletteItemImage.gameObject.SetActive(true);
-        if (rouletteNum == 0) fishRouletteItem.gameObject.SetActive(true);
-        if (rouletteNum == 1) meatRouletteItem.gameObject.SetActive(true);
-        if (rouletteNum == 2) shieldRouletteItem.gameObject.SetActive(true);
-        if (rouletteNum == 3) swordRouletteItem.gameObject.SetActive(true);
-
-        //è≠Çµé~Ç‹ÇÈ
-        await UniTask.Delay(TimeSpan.FromSeconds(2));
 
         rouletteCanvas.gameObject.SetActive(false);
     }

@@ -20,6 +20,8 @@ public class ButtonController : MonoBehaviour
     /// </summary>
     public async void ChangeScene()
     {
+        //SE
+        SeManager.Instance.PlaySE(4);
         await FadeManager.Inctance.FadeOut();
         await SceneManager.LoadSceneAsync(sceneName);
     }
@@ -29,6 +31,8 @@ public class ButtonController : MonoBehaviour
     /// </summary>
     public void SwitchingOnGoToTitleCanvas()
     {
+        //SE
+        SeManager.Instance.PlaySE(4);
         goToTitleCanvas.gameObject.SetActive(true);
     }
 
@@ -37,6 +41,8 @@ public class ButtonController : MonoBehaviour
     /// </summary>
     public void SwitchingOffGoToTitleCanvas()
     {
+        //SE
+        SeManager.Instance.PlaySE(4);
         goToTitleCanvas.gameObject.SetActive(false);
     }
 
@@ -45,6 +51,8 @@ public class ButtonController : MonoBehaviour
     /// </summary>
     public void SwitchingOffHowToPlayCanvas()
     {
+        //SE
+        SeManager.Instance.PlaySE(4);
         howToPlayCanvas.gameObject.SetActive(false);
     }
 }

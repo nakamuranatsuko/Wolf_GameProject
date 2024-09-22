@@ -25,30 +25,21 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""cb2054e2-9bb1-4275-82b6-2c15a5953ab2"",
+            ""id"": ""4623cbec-0e6d-4bab-b916-117859546d8d"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""7c02a825-961b-4abb-a160-16b6b4bd513d"",
+                    ""id"": ""0824f5d8-e194-4d00-b356-931570cfe66c"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""LeftButton"",
-                    ""type"": ""Button"",
-                    ""id"": ""9adfaeec-c34e-4a03-85c2-fe69b6ab0eff"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""cc35abd9-7598-4a57-b09c-23b3954053b8"",
+                    ""id"": ""3edff873-1edc-4020-8790-7906639323a9"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -57,7 +48,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
-                    ""id"": ""57909b1c-1db6-4e2d-aa25-f01032df24fa"",
+                    ""id"": ""69451c7c-18ce-46c4-8f37-1eb6555feb27"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -199,17 +190,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""674e16b4-f91a-4b63-ab46-fbcfdd67407e"",
-                    ""path"": ""<VirtualMouse>/position"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
@@ -295,28 +275,17 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d2c71ee2-016e-465a-a7fe-392fcedeae0d"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftButton"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
             ""name"": ""UI"",
-            ""id"": ""f4cd58aa-79f9-491a-8c2c-d3d6c2f04061"",
+            ""id"": ""411dd0e7-3e70-40a1-9be1-918c6ee678de"",
             ""actions"": [
                 {
                     ""name"": ""Navigate"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""57717dc4-ffaa-4c9a-9079-f55e0d50717d"",
+                    ""id"": ""39c3596c-5fbf-46de-8627-db0d2ec0808c"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -325,7 +294,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Submit"",
                     ""type"": ""Button"",
-                    ""id"": ""8795087f-c2e7-452b-b5ff-26b21c3dcc4e"",
+                    ""id"": ""9f99dfc9-a76f-4b07-8c99-968d83dc53fd"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -334,7 +303,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Cancel"",
                     ""type"": ""Button"",
-                    ""id"": ""0071389a-d9cc-4a5d-b5e8-54f75deca1b7"",
+                    ""id"": ""6d5549e4-d24a-4fee-8ba9-5cc0bf6d8f06"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -343,7 +312,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Point"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""65db1ffb-1750-410b-9a49-87f5775beeb8"",
+                    ""id"": ""ac9fd573-0f19-492e-847a-89533ee38112"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -352,7 +321,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Click"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""35e8e6df-1465-4778-8e69-89baea5133fb"",
+                    ""id"": ""d3f95ba0-b5fb-40bf-9253-9072dd4fb27f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -361,7 +330,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""ScrollWheel"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""984bf8b5-b128-4627-a467-071ac01a9561"",
+                    ""id"": ""42183524-c51c-4435-b879-fdae94de107e"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -370,7 +339,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""MiddleClick"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""abf32423-d43b-4930-80e3-c679aeca25a1"",
+                    ""id"": ""92c34fa3-7218-4b69-ac36-eedd19fe298a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -379,7 +348,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""RightClick"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""d755154e-1365-451a-9239-53768b2d8c80"",
+                    ""id"": ""ae65f141-b5cb-4bb4-b634-5bdeda1c7ea6"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -388,7 +357,7 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""TrackedDevicePosition"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""5b76b9e5-bd78-45af-95be-6eb91f840c70"",
+                    ""id"": ""a3150c60-9e04-4908-80a1-b68fb660e884"",
                     ""expectedControlType"": ""Vector3"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -397,17 +366,8 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""TrackedDeviceOrientation"",
                     ""type"": ""PassThrough"",
-                    ""id"": ""f5fc4ed8-808f-4400-bed3-c2dd3e690f89"",
+                    ""id"": ""0ab7b3b0-a4c2-4058-885b-39fb4525a740"",
                     ""expectedControlType"": ""Quaternion"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Button"",
-                    ""id"": ""72193f76-66a5-49d6-86d6-0f9593a81d76"",
-                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -831,17 +791,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
                     ""action"": ""TrackedDeviceOrientation"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""3128e617-e1d3-4772-a269-e51483993c7f"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -912,7 +861,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_LeftButton = m_Player.FindAction("LeftButton", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         // UI
@@ -927,7 +875,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
-        m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -990,7 +937,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
-    private readonly InputAction m_Player_LeftButton;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Fire;
     public struct PlayerActions
@@ -998,7 +944,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
         private @WolfInputSystem m_Wrapper;
         public PlayerActions(@WolfInputSystem wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
-        public InputAction @LeftButton => m_Wrapper.m_Player_LeftButton;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1013,9 +958,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @LeftButton.started += instance.OnLeftButton;
-            @LeftButton.performed += instance.OnLeftButton;
-            @LeftButton.canceled += instance.OnLeftButton;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
@@ -1029,9 +971,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @LeftButton.started -= instance.OnLeftButton;
-            @LeftButton.performed -= instance.OnLeftButton;
-            @LeftButton.canceled -= instance.OnLeftButton;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
@@ -1069,7 +1008,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_RightClick;
     private readonly InputAction m_UI_TrackedDevicePosition;
     private readonly InputAction m_UI_TrackedDeviceOrientation;
-    private readonly InputAction m_UI_Move;
     public struct UIActions
     {
         private @WolfInputSystem m_Wrapper;
@@ -1084,7 +1022,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
         public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
         public InputAction @TrackedDevicePosition => m_Wrapper.m_UI_TrackedDevicePosition;
         public InputAction @TrackedDeviceOrientation => m_Wrapper.m_UI_TrackedDeviceOrientation;
-        public InputAction @Move => m_Wrapper.m_UI_Move;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1124,9 +1061,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed += instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled += instance.OnTrackedDeviceOrientation;
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -1161,9 +1095,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
             @TrackedDeviceOrientation.started -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.performed -= instance.OnTrackedDeviceOrientation;
             @TrackedDeviceOrientation.canceled -= instance.OnTrackedDeviceOrientation;
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -1229,7 +1160,6 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
-        void OnLeftButton(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnFire(InputAction.CallbackContext context);
     }
@@ -1245,6 +1175,5 @@ public partial class @WolfInputSystem: IInputActionCollection2, IDisposable
         void OnRightClick(InputAction.CallbackContext context);
         void OnTrackedDevicePosition(InputAction.CallbackContext context);
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
-        void OnMove(InputAction.CallbackContext context);
     }
 }

@@ -20,9 +20,6 @@ public class TurnStart : MonoBehaviour
         //•\¦
         turnObj.gameObject.SetActive(true);
 
-        //­‚µ~‚Ü‚é
-        await UniTask.Delay(TimeSpan.FromSeconds(3));
-
         //‰ŠúˆÊ’u‚Ö
         turnPanel.transform.position = new Vector3(2000, 540, 0);
         //¶‚©‚ç^‚ñ’†‚Ö

@@ -55,7 +55,7 @@ public class TimeCounter : MonoBehaviour
             //時間をリセット
             time = turnTime;
             //フラグを降ろす
-            TurnChangeManager.CountFlg = false;
+            //TurnChangeManager.CountFlg = false;
         }
     }
 }
