@@ -22,6 +22,10 @@ public class ResultManager : MonoBehaviour
     private Transform p1Position;
     [SerializeField]
     private Transform p2Position;
+    [SerializeField]
+    private Image resultWolf;
+    [SerializeField]
+    private Image resultWolfDraw;
 
     private Vector2 p1RectTrans;
     private Vector2 p2RectTrans;
@@ -36,6 +40,9 @@ public class ResultManager : MonoBehaviour
 
         p1RectTrans = transform.InverseTransformPoint(p1Position.position);
         p2RectTrans = transform.InverseTransformPoint(p2Position.position);
+
+        resultWolf.gameObject.SetActive(true);
+        resultWolfDraw.gameObject.SetActive(false);
 
         //p1Ç™èüÇ¡ÇƒÇΩÇÁ
         if (p2Score < p1Score)
@@ -74,6 +81,12 @@ public class ResultManager : MonoBehaviour
             p2DrawImage.gameObject.SetActive(true);
             winAnimation.gameObject.SetActive(false);
             loseAnimation.gameObject.SetActive(false);
+
+            if (p1Score == 0 && p2Score == 0)
+            {
+                resultWolf.gameObject.SetActive(false);
+                resultWolfDraw.gameObject.SetActive(true);
+            }
         }
     }
 }
