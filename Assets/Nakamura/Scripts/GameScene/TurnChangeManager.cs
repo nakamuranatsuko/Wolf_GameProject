@@ -84,6 +84,9 @@ public class TurnChangeManager : MonoBehaviour
             DragItem.ItemDragFlg = false;
             //SE
             SeManager.Instance.PlaySE(5,0.7f);
+            //è≠Çµë“Ç¬
+            if (turnCount != 8) await UniTask.Delay(TimeSpan.FromSeconds(0.5));
+            CountFlg = false;
 
             if (turnCount != 8) await turnStart.TurnChange();
         }

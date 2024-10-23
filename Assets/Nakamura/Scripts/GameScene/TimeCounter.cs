@@ -19,7 +19,7 @@ public class TimeCounter : MonoBehaviour
     private GameObject goToTitleCanvas;
     [SerializeField]
     private GameObject turnStartCanvas;
-    //ルーレットの画面(まだ)
+    //ルーレットの画面
     [SerializeField]
     private GameObject rouletteCanvas;
 
@@ -46,7 +46,6 @@ public class TimeCounter : MonoBehaviour
             time = turnTime;
             //ターン交代
             TurnChangeManager.TimeFlg = true;
-            //ターンが始まるまで待機
         }
 
         //ほかの条件でターン交代したら
@@ -54,8 +53,6 @@ public class TimeCounter : MonoBehaviour
         {
             //時間をリセット
             time = turnTime;
-            //フラグを降ろす
-            //TurnChangeManager.CountFlg = false;
         }
     }
 }

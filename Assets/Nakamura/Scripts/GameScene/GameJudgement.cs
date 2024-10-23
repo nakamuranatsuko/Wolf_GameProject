@@ -87,8 +87,19 @@ public class GameJudgement : MonoBehaviour
                 if (item.gameObject.CompareTag(thirdTag)) score = thirdScore;
                 if (item.gameObject.CompareTag(fourthTag)) score = fourthScore;
 
-                //自身のタグを判定
-                PlayerTag(score);
+                //かごに入ってきたアイテムの名前とルーレットで指定された名前が違ったら
+                if (item.gameObject.name != RouletteManager.ItemName)
+                {
+                    //初期位置
+                    if (item.gameObject.name == "Fish") item.gameObject.transform.position = DragItem.FishPos;
+                    if (item.gameObject.name == "Meat") item.gameObject.transform.position = DragItem.MeatPos;
+                    if (item.gameObject.name == "Shield") item.gameObject.transform.position = DragItem.ShieldPos;
+                    if (item.gameObject.name == "Sword") item.gameObject.transform.position = DragItem.SwordPos;
+                    return;
+                }
+
+                    //自身のタグを判定
+                    PlayerTag(score);
 
                 //アイテムを非表示
                 if (itemGetFlg)
@@ -126,10 +137,10 @@ public class GameJudgement : MonoBehaviour
                 //点数を加算
                 P1Score += itemScore;
                 Debug.Log("P1Basket Score:" + P1Score);
-                //フラグをたてる
-                itemGetFlg = true;
                 //ターンを交代
                 TurnChangeManager.ItemFlg = true;
+                //フラグをたてる
+                itemGetFlg = true;
             }
         }
 
@@ -143,11 +154,10 @@ public class GameJudgement : MonoBehaviour
                 //点数を加算
                 P2Score += itemScore;
                 Debug.Log("P2Basket Score:" + P2Score);
-                //フラグをたてる
-                itemGetFlg = true;
                 //ターンを交代
                 TurnChangeManager.ItemFlg = true;
-
+                //フラグをたてる
+                itemGetFlg = true;
             }
         }
 

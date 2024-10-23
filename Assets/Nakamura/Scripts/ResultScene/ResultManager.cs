@@ -10,10 +10,11 @@ public class ResultManager : MonoBehaviour
     private TextMeshProUGUI P1ScoreText;
     [SerializeField]
     private TextMeshProUGUI P2ScoreText;
+
     [SerializeField]
-    private Image p1DrawImage;
+    private Image p1DrawAnimation;
     [SerializeField]
-    private Image p2DrawImage;
+    private Image p2DrawAnimation;
     [SerializeField]
     private Image winAnimation;
     [SerializeField]
@@ -48,12 +49,12 @@ public class ResultManager : MonoBehaviour
         if (p2Score < p1Score)
         {
             P1ScoreText.text = p1Score.ToString();
-            p1DrawImage.gameObject.SetActive(false);
+            p1DrawAnimation.gameObject.SetActive(false);
             winAnimation.gameObject.SetActive(true);
             winAnimation.gameObject.transform.position = p1RectTrans;
 
             P2ScoreText.text = p2Score.ToString();
-            p2DrawImage.gameObject.SetActive(false);
+            p2DrawAnimation.gameObject.SetActive(false);
             loseAnimation.gameObject.SetActive(true);
             loseAnimation.gameObject.transform.position = p2RectTrans;
         }
@@ -62,12 +63,12 @@ public class ResultManager : MonoBehaviour
         if (p1Score < p2Score)
         {
             P2ScoreText.text = p2Score.ToString();
-            p2DrawImage.gameObject.SetActive(false);
+            p2DrawAnimation.gameObject.SetActive(false);
             winAnimation.gameObject.SetActive(true);
             winAnimation.gameObject.transform.position = p2RectTrans;
 
             P1ScoreText.text = p1Score.ToString();
-            p1DrawImage.gameObject.SetActive(false);
+            p1DrawAnimation.gameObject.SetActive(false);
             loseAnimation.gameObject.SetActive(true);
             loseAnimation.gameObject.transform.position = p1RectTrans;
         }
@@ -77,12 +78,12 @@ public class ResultManager : MonoBehaviour
         {
             P1ScoreText.text = p1Score.ToString();
             P2ScoreText.text = p2Score.ToString();
-            p1DrawImage.gameObject.SetActive(true);
-            p2DrawImage.gameObject.SetActive(true);
+            p1DrawAnimation.gameObject.SetActive(true);
+            p2DrawAnimation.gameObject.SetActive(true);
             winAnimation.gameObject.SetActive(false);
             loseAnimation.gameObject.SetActive(false);
 
-            if (p1Score == 0 && p2Score == 0)
+            if(p1Score == 0 && p2Score == 0)
             {
                 resultWolf.gameObject.SetActive(false);
                 resultWolfDraw.gameObject.SetActive(true);
